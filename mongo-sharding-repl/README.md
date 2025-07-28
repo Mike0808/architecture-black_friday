@@ -2,37 +2,16 @@
 
 ## Как запустить
 
-Для первичного запуска
 Запускаем mongodb в режиме шардирования с репликацие на 2 инстанса и запуск приложения
 
-1. Необходимо выбрать проект и перейти в соответствующую директорию
-   Виды проектов:
-   1. MongoDB без реплики и шардирования
-    ```shell
-    cd ./single_mongo
-    ```
-   2. MongoDB с шардирование без реплик
-   ```shell
-    cd ./mongo-sharding   
-   ```
-   3. MongoDB с шардированием и репликацией
-    ```shell
-    cd ./mongo-sharding-repl   
-   ```
-   4. MongoDB с шардированием и репликацией + кеширование в Redis
-   ```shell
-    cd ./sharding-repl-cache   
-   ```
-
-2. После выбора проекта выполнить команду
-
 ```shell
-sudo ./start.sh
+./start.sh
 ```
-Для последующийх запусков
+
+Заполняем mongodb данными
 
 ```shell
-sudo docker-compose -f compose.yaml up -d
+./scripts/mongo-init.sh
 ```
 
 ## Как проверить
